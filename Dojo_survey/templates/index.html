@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: black;
+        }
+        .container {
+            margin-top: 75px;
+            background-color: rgb(84, 90, 94);
+            font-family: 'Quicksand', sans-serif;
+            border-radius: 4px;
+        }
+        #top{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #top h1{
+            padding: 30px;
+            flex: 4;
+            font-size: 40pt;
+            color:#05c8e2;
+            letter-spacing: 45px;
+            text-shadow: 2px 2px 8px rgb(14, 14, 14);
+            font-weight: bold;
+        }
+        #top img{
+            flex: 1;
+            margin:20px;
+            border-radius: 4px;
+            box-shadow: 2px 2px 8px rgb(39, 39, 39);
+        }
+        #bot{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #bot input, #bot select, #bot textarea{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .select{
+            background-color: rgb(212, 211, 211);
+            outline:none;
+        }
+        .select:hover, #bot input, #bot textarea{
+            background-color: #f3f3f3;
+        }
+        .select option{
+            background-color: #d4f8fdf5;
+        }
+        #bot textarea:focus, #bot input:focus{
+            background-color: #d4f8fdf5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="top">
+            <h1>Dojo Survey</h1>
+            <img src="{{ url_for('static', filename='dojo.jpg') }}" alt="">
+        </div>
+        <div class="row" id="bot">
+            <form action='/success' method='post'>
+                <input type="text" name="name" placeholder="Name" class="form-control">
+                <select class="select" name="location">
+                    <option value="San Jose">Dojo Location</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="San Jose">San Jose</option>
+                </select>
+                <select class="select" name="language">
+                    <option value="Python">Favorite Language</option>
+                    <option value="Python">Python</option>
+                    <option value="Python">Python</option>
+                    <option value="Python">Python</option>
+                </select>
+                <textarea name="comment" class="form-control" placeholder="Comment (optional)" cols="30" rows="10"></textarea>
+                <input type="submit" value='submit'>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
