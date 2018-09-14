@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='ff.jpg') }}" alt="">
+        <!-- <img src="../static/ff.jpg" alt=""> -->
+        <div id="top" class="row">
+            <h4>Your Gil:</h4>
+            <h4 id="gold">{{ gil }}</h4>
+        </div>
+        <div id="boxes" class="row">
+            <div class="box">
+                <h1>Farm</h1>
+                <p>(earns 10-20 gil)</p>
+                <form action="/process" method="POST">
+                    <input type="hidden" name="postType" value="farm">
+                    <input type="submit" value="Find gil!">
+                </form>
+            </div>
+            <div class="box">
+                <h1>Cave</h1>
+                <p>(earns 5-10 gil)</p>
+                <form action="/process" method="POST">
+                    <input type="hidden" name="postType" value="cave">
+                    <input type="submit" value="Find gil!">
+                </form>
+            </div>
+            <div class="box">
+                <h1>House</h1>
+                <p>(earns 2-5 gil)</p>
+                <form action="/process" method="POST">
+                    <input type="hidden" name="postType" value="house">
+                    <input type="submit" value="Find gil!">
+                </form>
+            </div>
+            <div class="box">
+                <h1>Gold Saucer</h1>
+                <p>(earns/loses 0-50 gil)</p>
+                <form action="/process" method="POST">
+                    <input type="hidden" name="postType" value="Gold Saucer">
+                    <input type="submit" value="Find gil!">
+                </form>
+            </div>
+        </div>
+        <div class="row" id='output'>
+            <h3>ACTIVITY</h3>
+            <div id="activity">
+                {% for activity in activities %}
+                {{ activity|safe }}
+                {% endfor %}
+            </div>
+        </div>
+        <form action="/reset" method="POST">
+            <button type="submit">Reset Game</button>
+        </form>
+    </div>
+</body>
+
+</html>

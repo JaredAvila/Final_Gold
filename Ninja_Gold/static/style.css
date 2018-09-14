@@ -1,0 +1,96 @@
+body{
+    background-color: black;
+    font-family: 'Libre Baskerville', serif;
+}
+.container{
+    margin-top: 50px;
+    background-color: gray;
+    text-align: center;
+    border-radius: 2px;
+}
+.container img{
+    height: 300px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px;
+    margin:10px;
+
+}
+
+#gold{
+    color: rgb(126, 103, 13);
+    font-weight: bold;
+}
+
+.box{
+    margin: 5px;
+    height: 170px;
+    width: 220px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: rgb(58, 100, 148);
+    border: 1px solid black;
+}
+.box input{
+    background-color: rgb(202, 170, 26);
+    border-radius: 2px;
+    outline: none;
+}
+
+#top{
+    padding: 10px;
+    display: flex;
+}
+
+#top h4{
+    margin-left: 50px;
+    padding: 10px;
+}
+
+#boxes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#output{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(58, 100, 148);
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+#output h3{
+    padding: 10px;
+    background-color: #4d3c7a;
+    margin: 10px;
+    color: rgb(27, 27, 27);
+    border-radius: 30px;
+    border: 3px solid rgb(27, 27, 27);
+    text-shadow: 0px 0px 8px white;
+    font-weight: bold;
+}
+
+#output p{
+    height: fit-content;
+    padding-left: 50px;
+    padding-top: 5px;
+}
+
+#activity, #top h4#gold{
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: rgb(171, 197, 226);
+}
+
+#plus{
+    color: rgb(8, 107, 8);
+    font-weight: bold;
+}
+#minus{
+    color: rgb(182, 7, 7);
+    font-weight: bold;
+}
