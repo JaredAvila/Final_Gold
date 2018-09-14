@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form</title>
+    <style>
+        body{
+            background-color:bisque;
+            padding: 80px;
+        }
+        .container{
+            background-color: rgb(157, 184, 204);
+            padding: 150px;
+            width: fit-content;
+            margin: auto;
+            border-radius: 4px;
+            box-shadow: 2px 2px 2px black;
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            margin: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        h1{
+            color: rgb(52, 70, 62);
+            font-size: 34pt;
+            letter-spacing: 20px;
+            text-shadow: 1px 1px 2px;
+        }
+        p {
+            color:rgb(129, 26, 26);
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <h1>Registration Form</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action="/validate" method="POST">
+            <input type="text" name="fName" placeholder="First Name" value={{ session['fName'] }} >
+            <input type="text" name="lName" placeholder="Last Name" value={{ session['lName'] }} >
+            <input type="text" name="email" placeholder="Email" value= {{ session['email'] }}>
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="conf_password" placeholder="Confirm Password">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
