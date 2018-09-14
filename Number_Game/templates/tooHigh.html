@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Game</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>The <span>Great</span> Number Game</h1>
+            <div id="tooHigh">
+                <h2>Too high</h2>
+            </div>
+            <h4>Guess a number between 1 and 100</h4>
+            <form action="/guess" method="POST">
+                <input id="guess" type="text" name="guess" placeholder="guess a number">
+                <input id="btn" type="submit" value="submit guess">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

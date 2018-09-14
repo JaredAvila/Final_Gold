@@ -1,0 +1,81 @@
+body{
+    background-color: black;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.container{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    width: 870px;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 8px;
+}
+.row h1{
+    color: white;
+    font-size: 36pt;
+    border-bottom: 2px solid rgb(29, 29, 29);
+    margin-bottom: 80px;
+    letter-spacing: 15px;
+}
+
+.row h4 {
+    font-family: 'Lobster', cursive;
+    font-size: 16pt;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row input{
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12pt;
+    outline:none;
+}
+
+.row h1 span{
+    color: rgb(29, 29, 29);
+}
+
+#guess{
+    background-color: rgb(129, 81, 81);
+    border-bottom: 2px solid rgb(114, 71, 71);
+    border-right: 2px solid rgb(114, 71, 71);
+    border-top: 2px solid rgb(90, 58, 58);
+    border-left: 2px solid rgb(90, 58, 58);
+}
+
+#btn{
+    background-color:rgb(133, 23, 23);
+    border-top: 2px solid rgb(214, 132, 132);
+    border-bottom: 2px solid rgb(146, 91, 91);
+    border-right: 2px solid rgb(146, 91, 91);
+    border-left: 2px solid rgb(214, 132, 132);
+}
+#btn:active{
+    background-color:rgb(119, 30, 30);
+    border-bottom: 2px solid rgb(214, 132, 132);
+    border-top: 2px solid rgb(146, 91, 91);
+    border-left: 2px solid rgb(146, 91, 91);
+    border-right: 2px solid rgb(214, 132, 132);
+}
+
+#tooHigh h2, #tooLow h2 {
+    background-color: rgb(156, 24, 24);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px black;
+}
+#justRight h2{
+    text-align: center;
+    background-color: rgb(8, 97, 8);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px black;
+}

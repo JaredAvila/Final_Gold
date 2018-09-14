@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Game</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>The <span>Great</span> Number Game</h1>
+            <div id="justRight">
+                <h2>You guess it!<br>
+                    The number was {{ number }}</h2>
+            </div>
+            <form action="/replay" method="POST">
+                <input id="btn" type="submit" value="Play AGAIN">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
